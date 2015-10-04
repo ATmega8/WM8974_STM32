@@ -14,7 +14,7 @@ LDSCRIPT_INC = ../ldscrpit
 STDPERIPHSRC= ../STM32F4xx_DSP_StdPeriph_Lib_V1.5.1/Libraries/STM32F4xx_StdPeriph_Driver
 
 #FREERTOS 位置
-FREERTOS= ../freeRTOS
+FREERTOS= ./freeRTOS
 
 #C编译器
 CC=arm-none-eabi-gcc
@@ -78,4 +78,13 @@ clean:
 	rm -f $(PROJ_NAME).bin
 	rm -f $(PROJ_NAME).map
 
+cleanall:
+	find ./ -name '*~' | xargs rm -f	
+	rm -f *.o
+	rm -f $(PROJ_NAME).elf
+	rm -f $(PROJ_NAME).hex
+	rm -f $(PROJ_NAME).bin
+	rm -f $(PROJ_NAME).map
+	rm -f ./freeRTOS/*.o
+	rm -f ./freeRTOS/libfreertos_cm4f.a
 
