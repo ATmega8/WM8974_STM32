@@ -1,3 +1,5 @@
+#include <stdint.h>
+
 /*********************
 				WM8974 Register Define
 				*****************************/
@@ -19,6 +21,8 @@
 #define EQ3_PEAK_ADDR                   0x14
 #define EQ4_PEAK_ADDR                   0x15
 #define EQ5_HIGH_SHELF_ADDR             0x16
+
+#define DEVICE_ADDR                     0x34
 
 void WM8974_InitTask(void* pvParameters);
 
@@ -70,7 +74,7 @@ void WM8974_InitTask(void* pvParameters);
 
 #define SPI3_ADDR             0x40003C0C
 
-void I2S_Config(void);
-void DMA_Config(uint16_t* pdata, uint16_t* pdata2);
-void NVIC_Config(void);
+uint32_t WM8974_Init(uint32_t AudioFreq, uint16_t* pdata, uint16_t* pdata2);
+
+void WM8974_Start(void);
 
