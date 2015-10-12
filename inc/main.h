@@ -43,6 +43,7 @@
 #include "usart.h"
 #include "iic.h"
 #include "wm8974.h"
+#include "nrf24l01.h"
 
 /* Exported types ------------------------------------------------------------*/
 uint8_t txBuf[6];

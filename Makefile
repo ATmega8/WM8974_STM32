@@ -4,6 +4,7 @@ PROJ_NAME=wm8974
 #要编译的文件
 SRCS  = stm32f4xx_it.c system_stm32f4xx.c
 SRCS += main.c usart.c newlib.c iic.c wm8974.c
+SRCS += nrf24l01.c
 
 SRCS += ../STM32F4xx_DSP_StdPeriph_Lib_V1.5.1/Libraries/CMSIS/Device/ST/STM32F4xx/Source/Templates/gcc_ride7/startup_stm32f40_41xxx.s
 
